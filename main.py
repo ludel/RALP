@@ -1,37 +1,38 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
-import pandas as pd
+import os
 
 
 def main():
-    files = {'python': 'train/python',
-             'ruby': 'train/ruby',
-             'html': 'train/html',
-             'css': 'train/css',
-             'js': 'train/js',
-             'java': 'train/java',
-             'go': 'train/go'}
+    print("---- Train file ----")
+    train = get_all_files("train/")
 
-    data = load_data(files)
+    print("\n---- Test file ----")
+    test = get_all_files("test/")
 
+    train = load_data(train)
+    test = load_data(test)
+
+    list_predict = list(prediction(train, test))
+
+    print("\n ========= Prediction =========")
+    for predict, real in zip(list_predict, list(test.keys())):
+        check_prediction = "good prediction" if predict == real else "bad prediction"
+        print(f"- Language predict: {predict} / real: {real} ====> ", check_prediction)
+
+    print("Process End")
+
+
+def prediction(train, test):
     clf = Pipeline([
         ('vec', TfidfVectorizer(analyzer='word', use_idf=False)),
         ('clf', MultinomialNB()),
     ])
 
-    clf.fit(list(data.values()), list(data.keys()))
+    clf.fit(list(train.values()), list(train.keys()))
 
-    test = load_data({"python": "test/python_test",
-                      "css": "test/css_test",
-                      "html": "test/html_test",
-                      "java": 'test/java_test',
-                      "go": 'test/go_test'})
-
-    list_predict = list(clf.predict(test.values()))
-
-    for predict, real in zip(list_predict, list(test.keys())):
-        print(f"- Language predict {predict} / real {real}")
+    return clf.predict(test.values())
 
 
 def load_data(files):
@@ -41,6 +42,21 @@ def load_data(files):
             data[lang] = f.read()
             f.close()
     return data
+
+
+def get_all_files(dir_path):
+    files = {}
+    for file in os.listdir(dir_path):
+        lang = prompt(f"What is the language of '{file}' file ? ({file})", file)
+        files[lang] = dir_path + file
+    return files
+
+
+def prompt(text, default):
+    inp = input(text)
+    if not inp:
+        inp = default
+    return inp
 
 
 if __name__ == '__main__':
