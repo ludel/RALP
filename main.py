@@ -1,4 +1,4 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 import os
@@ -26,7 +26,7 @@ def main():
 
 def prediction(train, test):
     clf = Pipeline([
-        ('vec', TfidfVectorizer(analyzer='word', use_idf=False)),
+        ('vec', CountVectorizer(analyzer='word')),
         ('clf', MultinomialNB()),
     ])
 
