@@ -32,7 +32,11 @@ def prediction(train, test):
     ])
 
     clf.fit(list(train.values()), list(train.keys()))
-    return clf.predict(test.values()), clf.score(list(test.values()), list(test.keys()))
+
+    predict = clf.predict(test.values())
+    score = clf.score(list(test.values()), list(test.keys()))
+
+    return predict, score
 
 
 def load_data(files):
