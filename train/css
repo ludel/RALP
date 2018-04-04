@@ -1,0 +1,187 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    background-color: #4eacc5;
+    margin: 0;
+    padding: 0;
+}
+
+div.header-wrapper {
+    background-color: #ffffff;
+    max-width: 1024px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 15px 0 15px;
+    margin-top: 0px;
+}
+
+ul.horizontal, ul.horizontal li {
+    display: inline;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+div.header {
+    /* for the logo to correctly expand when showing results
+       but remain cut when not */
+    overflow: hidden;
+}
+
+
+p.logo {
+    margin-top: auto;
+    margin-left: 20px;
+    float: left;
+    margin: 0 0 0 20px;
+    height: 50px;
+}
+
+span.legend {
+    font-family: Verdana;
+    font-size: 15px;
+    position: relative;
+    left: -35px;
+    top: -3px;
+}
+
+div.navbar {
+    padding-top: 15px;
+    margin-left: 200px;
+}
+
+div.navbar ul {
+    background-color: #ff9c34;
+    color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    list-style: none;
+}
+
+div.navbar ul, div.navbar li {
+    display: inline;
+    list-style: none;
+    padding: 4px 10px 5px 10px;
+}
+
+div.navbar ul li a,
+div.navbar ul li a:link,
+div.navbar ul li a:visited,
+div.navbar ul li a:hover {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+div.navbar ul li a:hover {
+    color: #EEE;
+}
+
+.gsc-input {
+    width: 180px;
+    float: right;
+}
+
+.search_form {
+    margin-top: -23px;
+    z-index: -1;
+}
+
+.gsc-branding {
+    display: none;
+}
+
+.quote {
+    text-align: right;
+    line-height: 1.5em;
+    font-style: italic;
+    margin: 2em 3em 1em 3em;
+}
+
+div.content-wrapper {
+    background-color: #ffffff;
+    color: #3E4349;
+    max-width: 1024px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+div.content {
+    margin-left: 200px;
+    padding-bottom: 10px;
+}
+
+div.example_digits {
+    max-width: 700px;
+    font-size: 85%;
+}
+
+
+div.document {
+    padding-left: 240px;
+    padding-right: 20px;
+}
+
+hr {
+   border: 1px solid #B1B4B6;
+}
+
+
+div.body {
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+div.footer {
+    color: #555;
+    width: 100%;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 75%;
+}
+
+div.footer a {
+    color: #444;
+    text-decoration: underline;
+}
+
+div.related {
+    background-color: #6BA81E;
+    line-height: 32px;
+    color: #fff;
+    text-shadow: 0px 1px 0 #444;
+    font-size: 0.9em;
+}
+
+div.related a {
+    color: #E2F3CC;
+}
+
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    padding: 5px 10px;
+    background-color: #4EACC5;
+    font-weight: normal;
+    color: white;
+    margin: 25px 20px 0 10px;
+}
+
+div.sphinxsidebar img {
+    margin: 5px;
+}
+
+
+div.sphinxsidebar p {
+    padding: 0px 20px;
+}
+
+div.sphinxsidebar p.topless {
+}

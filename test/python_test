@@ -1,0 +1,35 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import Perceptron
+
+
+def main():
+    files = ['java', 'c', 'python']
+
+    data = load_data(files)
+
+    vectorizer = TfidfVectorizer(analyzer='char')
+
+    clf = Pipeline([
+        ('vec', vectorizer),
+        ('clf', Perceptron(tol=1e-3)),
+    ])
+
+    clf.fit(data, files)
+
+    test = load_data(["java_test"])
+    predict = clf.predict(test)
+    print(predict[0])
+
+
+def load_data(files):
+    data = []
+    for file in files:
+        with open(file, 'r') as f:
+            data.append(f.read())
+            f.close()
+    return data
+
+
+if __name__ == '__main__':
+    main()

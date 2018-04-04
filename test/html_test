@@ -1,0 +1,30 @@
+
+<div class="header-wrapper">
+    <div class="header">
+        <p class="logo"><a href="../../index.html">
+            <img src="../../_static/scikit-learn-logo-small.png" alt="Logo"/>
+        </a>
+        </p><div class="navbar" id="scikit-navbar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../install.html">Installation</a></li>
+                <li class="btn-li"><div class="btn-group">
+              <a href="../../documentation.html">Documentation</a>
+              <a class="btn dropdown-toggle" data-toggle="dropdown">
+                 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+            <li class="link-title">Scikit-learn <script>document.write(DOCUMENTATION_OPTIONS.VERSION + (VERSION_SUBDIR ? " (" + VERSION_SUBDIR + ")" : ""));</script></li>
+            <li><a href="../../tutorial/index.html">Tutorials</a></li>
+            <li><a href="../../user_guide.html">User guide</a></li>
+            <li><a href="../classes.html">API</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+            <li><a href="../../developers/contributing.html">Contributing</a></li>
+            <li class="divider"></li>
+                <script>if (VERSION_SUBDIR != "stable") document.write('<li><a href="http://scikit-learn.org/stable/documentation.html">Stable version</a></li>')</script>
+                <script>if (VERSION_SUBDIR != "dev") document.write('<li><a href="http://scikit-learn.org/dev/documentation.html">Development version</a></li>')</script>
+                <li><a href="http://scikit-learn.org/dev/versions.html">All available versions</a></li>
+                <li><a href="../../_downloads/scikit-learn-docs.pdf">PDF documentation</a></li>
+              </ul>
+            </div>
+        </li>

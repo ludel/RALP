@@ -1,0 +1,45 @@
+package Bags;
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class Bag<Element> implements Iterable<Element> {
+
+	private Node<Element> firstElement; // first element of the bag
+	private int size; // size of bag
+
+	private static class Node<Element> {
+		private Element content;
+		private Node<Element> nextElement;
+	}
+
+
+	public Bag() {
+		firstElement = null;
+		size = 0;
+	}
+
+	/**
+	 * @return true if this bag is empty, false otherwise
+	 */
+	public boolean isEmpty() {
+		return firstElement == null;
+	}
+
+	/**
+	 * @return the number of elements
+	 */
+	public int size() {
+		return size;
+	}
+
+	/**
+	 * @param element - the element to add
+	 */
+	public void add(Element element) {
+		Node<Element> oldfirst = firstElement;
+		firstElement = new Node<>();
+		firstElement.content = element;
+		firstElement.nextElement = oldfirst;
+		size++;
+}

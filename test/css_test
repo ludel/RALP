@@ -1,0 +1,62 @@
+
+
+div.sphinxsidebar ul {
+    margin: 10px 10px;
+    padding: 0;
+    color: #000;
+    font-weight: bold;
+}
+
+div.sphinxsidebar ul ul {
+    margin-right: 0;
+    margin-left: 10px;
+    list-style: disc outside none;
+    color: #355F7C;
+    font-weight: normal;
+}
+
+div.sphinxsidebar ul ul ul {
+    font-size: 80%;
+    list-style: square outside none;
+}
+
+div.sphinxsidebar {
+    width: 200px;
+    float: left;
+    margin-left: 0;
+    background-color: inherit;
+    border-top-left-radius: 15px;
+    -moz-border-radius:15px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    margin-top: 5px;
+}
+
+div.sphinxsidebar h3 {
+    text-align: left;
+    font-size: 16px;
+}
+
+div.sphinxsidebar ul {
+    list-style: none;
+}
+
+div.sphinxsidebar {
+    font-size: 80%;
+    line-height: 1.5em;
+}
+
+
+input {
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-shadow: none;
+    font-family: Arial;
+    font-size: 1em;
+    padding: 3px;
+}
+
+div.sphinxsidebar input[type=text]{
+    margin-left: 20px;
+}
