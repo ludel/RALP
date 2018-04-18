@@ -1,7 +1,7 @@
 # RALP
 Reconnaissance automatique du langage de programmation
 
-| Language       |
+| Langage       |
 | :------------ |
 | css       |
 | go     |
