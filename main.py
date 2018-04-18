@@ -58,7 +58,7 @@ def get_files_and_language(dir_path, possible_choice=""):
 
 def prompt(text, default, possible_choice):
     inp = input(text)
-    while inp not in possible_choice and possible_choice:
+    while possible_choice and inp not in possible_choice:
         print("Unknown language")
         inp = input(text)
     if not inp:
